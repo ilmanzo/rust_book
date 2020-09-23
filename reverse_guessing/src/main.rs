@@ -17,7 +17,7 @@ fn main() {
     println!("welcome to reverse guessing!");
 
     let mut secret_number = 0;
-    while secret_number <= 0 && secret_number < 100 {
+    while secret_number <= 0 || secret_number > 99 {
         secret_number = ask_secret_number();
     }
     println!("the secret number I will guess is: {}", secret_number);
