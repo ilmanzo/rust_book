@@ -14,7 +14,7 @@ fn main() {
     let converted= match conversion {
         'C' => convert_to_fahreneit(temp),
         'F' => convert_to_celsius(temp),
-        _ => {panic!("please enter C or F")}
+        _ => unreachable!()
     };
     println!("{} {} is equivalent to {} {}",temp,conversion,converted,get_reverse_symbol(conversion))
 
