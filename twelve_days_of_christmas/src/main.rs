@@ -4,9 +4,9 @@ fn print_up_to(n: usize) {
         "10th", "11th", "12th",
     ];
 
-    let lyrics = [
+    let gifts = [
         "A partridge in a pear tree",
-        "Two turtle doves",
+        "Two turtle doves, and",
         "Three French hens",
         "Four calling birds",
         "Five gold rings",
@@ -24,7 +24,7 @@ fn print_up_to(n: usize) {
         days[n-1]
     );
     for d in (0..n).rev() {
-        println!("{}", lyrics[d]);
+        println!("{}", gifts[d]);
     }
 }
 
