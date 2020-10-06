@@ -1,10 +1,15 @@
 fn print_up_to(n: usize) {
+    let days = [
+        "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
+        "10th", "11th", "12th",
+    ];
+
     let lyrics = [
         "A partridge in a pear tree",
         "Two turtle doves",
         "Three French hens",
         "Four calling birds",
-        "five gold rings",
+        "Five gold rings",
         "Six geese a laying",
         "Seven swans a-swimming",
         "Eight maids a-milking",
@@ -14,7 +19,10 @@ fn print_up_to(n: usize) {
         "12 drummers drumming",
     ];
     println!();
-    println!("on the {} day of Christmas my true love sent to me", n);
+    println!(
+        "on the {} day of Christmas my true love sent to me",
+        days[n-1]
+    );
     for d in (0..n).rev() {
         println!("{}", lyrics[d]);
     }
