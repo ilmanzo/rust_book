@@ -1,5 +1,4 @@
-fn print_up_to(n: usize)
-{
+fn print_up_to(n: usize) {
     let lyrics = [
         "A partridge in a pear tree",
         "Two turtle doves",
@@ -14,13 +13,12 @@ fn print_up_to(n: usize)
         "11 pipers piping",
         "12 drummers drumming",
     ];
-    println!(); 
-    println!("on the {} day of Christmas my true love sent to me",n);
+    println!();
+    println!("on the {} day of Christmas my true love sent to me", n);
     for d in (0..n).rev() {
-        println!("{}",lyrics[d]);
+        println!("{}", lyrics[d]);
     }
 }
-
 
 fn main() {
     for day in 1..13 {
