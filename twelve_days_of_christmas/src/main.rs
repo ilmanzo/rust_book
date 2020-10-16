@@ -1,10 +1,10 @@
 fn print_up_to(n: usize) {
-    let days = [
+    const DAYS: [&str;12]= [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
         "10th", "11th", "12th",
     ];
 
-    let gifts = [
+    const GIFTS: [&str;12] = [
         "A partridge in a pear tree",
         "Two turtle doves, and",
         "Three French hens",
@@ -21,10 +21,10 @@ fn print_up_to(n: usize) {
     println!();
     println!(
         "on the {} day of Christmas my true love sent to me",
-        days[n-1]
+        DAYS[n-1]
     );
     for d in (0..n).rev() {
-        println!("{}", gifts[d]);
+        println!("{}", GIFTS[d]);
     }
 }
 
