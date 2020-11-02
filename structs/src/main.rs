@@ -1,12 +1,13 @@
 fn main() {
-    
-    struct Dog {
-        name: String,
-        age: u32
-    }
+    let width1 = 30;
+    let height1 = 50;
 
-    let kiki=Dog { name: String::from("Kiki"), age: 5};
+    println!(
+        "The area of the rectangle is {} square pixels",
+        area(width1, height1)
+    );
+}
 
-    println!("{} is {} years old",kiki.name, kiki.age)
-
+fn area(width: u32, height: u32) -> u32 {
+    width * height
 }
