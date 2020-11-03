@@ -6,9 +6,13 @@ struct Rectangle {
 
 impl Rectangle {
     fn area(&self) -> u32 {
-        self.width*self.height
+        self.width * self.height
     }
 
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width >= other.width && self.height >= other.height
+            || self.width >= other.height && self.height >= other.width
+    }
 }
 
 fn main() {
@@ -16,12 +20,33 @@ fn main() {
     // let height1 = 50;
     // let dimensions=(30,50);
 
-    let r = Rectangle {
+    let r1 = Rectangle {
         width: 30,
         height: 50,
     };
-    let a=r.area(); // test for reference borrow
-    println!("The area of the rectangle {:?} is {} square pixels", r, r.area());
+
+    let r2 = Rectangle {
+        width: 40,
+        height: 20,
+    };
+
+    let a = r1.area(); // test for reference borrow
+    println!(
+        "The area of the rectangle1 {:?} is {} square pixels",
+        r1,
+        r1.area()
+    );
+
+    println!(
+        "The area of the rectangle2 {:?} is {} square pixels",
+        r2,
+        r2.area()
+    );
+
+
+    if r1.can_hold(&r2) {
+        println!("r1 can hold r2")
+    } else {
+        println!("r1 cannot hold r2")
+    }
 }
-
-
