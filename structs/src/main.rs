@@ -13,6 +13,10 @@ impl Rectangle {
         self.width >= other.width && self.height >= other.height
             || self.width >= other.height && self.height >= other.width
     }
+
+    fn square(size: u32) -> Rectangle {
+        Rectangle{width: size, height: size}
+    }
 }
 
 fn main() {
